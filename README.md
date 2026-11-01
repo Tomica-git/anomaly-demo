@@ -4,7 +4,7 @@
 
 ## ダッシュボード
 
-URL：（あとで入れる）
+URL：https://anomaly-demo.pages.dev
 
 ## 動かし方
 

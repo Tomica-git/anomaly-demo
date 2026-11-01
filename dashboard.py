@@ -1,4 +1,4 @@
-"""時系列のCSVを3つの統計の方法で調べ、ブラウザで開くだけで見られる dashboard.html を作る。
+"""時系列のCSVを3つの統計の方法で調べ、ブラウザで開くだけで見られるダッシュボード index.html を作る。
 
 使い方: python3 dashboard.py data.csv
 """
@@ -29,7 +29,7 @@ ANSWERS = [
 # 出力：グラフの道具 Chart.js の取得元と、中身を確かめるための指紋（SHA-256）
 CHART_JS_URL = "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"
 CHART_JS_SHA256 = "74401d738dd3e03ee5dfb3b6841210fe2c4ead8a960c4011ca4ba0b78a9fd8f3"
-OUTPUT = Path(__file__).resolve().parent / "dashboard.html"
+OUTPUT = Path(__file__).resolve().parent / "index.html"
 
 
 # 1. 読み込み：CSV（timestamp, value の2列）を読み、1時間ごとの表にそろえる
@@ -119,7 +119,7 @@ def fetch_chartjs():
     return body.decode("utf-8")
 
 
-# 3. HTML作成：検出結果と Chart.js を HTML に埋め込み、1ファイルで動く dashboard.html を書き出す
+# 3. HTML作成：検出結果と Chart.js を HTML に埋め込み、1ファイルで動く index.html を書き出す
 def build_html(source, df, sigma_info, ma_sd, truth, results):
     nums = lambda col: [None if pd.isna(x) else round(float(x), 3) for x in df[col]]
     data = {

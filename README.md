@@ -12,7 +12,7 @@ URL：（あとで入れる）
 python3 dashboard.py data.csv
 ```
 
-`dashboard.html` ができます。データとグラフの道具（Chart.js）を中に埋め込んでいるので、このファイル1つをブラウザで開くだけで見られます。
+`index.html`（ダッシュボード）ができます。データとグラフの道具（Chart.js）を中に埋め込んでいるので、このファイル1つをブラウザで開くだけで見られます。
 
 - 必要なもの：Python 3 と pandas（`pip install -r requirements.txt`）
 - 実行のたびに Chart.js を jsDelivr から取得するため、インターネット接続が必要です
@@ -33,7 +33,7 @@ python3 dashboard.py data.csv
 | ファイル | 中身 |
 |---|---|
 | `dashboard.py` | 読み込み → 検出 → HTML作成 を1本で行う |
-| `dashboard.html` | できあがったダッシュボード（1ファイルで動く） |
+| `index.html` | できあがったダッシュボード（1ファイルで動く） |
 | `data.csv` | 練習用の架空データ（1時間ごと336件、異常4種類入り） |
 | `requirements.txt` | 必要なライブラリ |
 
